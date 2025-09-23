@@ -1,5 +1,9 @@
 import matplotlib.pyplot as plt
 
+import matplotlib
+
+import numpy as np
+
 
 def plot_data(x, y):
     # ===================== Your Code Here =====================
@@ -11,7 +15,10 @@ def plot_data(x, y):
     # Hint : You can use the 'marker' parameter in the "plt.scatter" function to change the marker type (e.g. "x", "o").
     #        Furthermore, you can change the color of markers with 'c' parameter.
 
-
     # ===========================================================
+    plt.scatter(x, y, marker="x", c="r", s=100)
+
+    plt.xlabel("Population of City in 10,000s")
+    plt.ylabel("Profit in $10,000s")
 
     plt.show()
