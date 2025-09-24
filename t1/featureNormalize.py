@@ -24,7 +24,18 @@ def feature_normalize(X):
     # Hint: You might find the 'np.mean' and 'np.std' functions useful.
     #       To get the same result as Octave 'std', use np.std(X, 0, ddof=1)
     #
-
     # ===========================================================
+
+    # means
+    house_size_mean = np.mean(X[:, 0])
+    num_bedrooms_mean = np.mean(X[:, 1])
+    mu = np.array([house_size_mean, num_bedrooms_mean])
+
+    # standard deviations
+    house_size_std = np.std(X[:, 0], ddof=1)
+    num_bedrooms_std = np.std(X[:, 1], ddof=1)
+    sigma = np.array([house_size_std, num_bedrooms_std])
+
+    X_norm = (X - mu) / sigma
 
     return X_norm, mu, sigma

@@ -28,10 +28,15 @@ def gradient_descent_multi(X, y, theta, alpha, num_iters):
     m = y.size
     J_history = np.zeros(num_iters)
 
+    features = X.shape[1]
+
     for i in range(0, num_iters):
         # ===================== Your Code Here =====================
         # Instructions : Perform a single gradient step on the parameter vector theta
         #
+
+        # Calcula as previsões
+        theta = theta - (alpha / m) * np.dot(X.T, (np.dot(X, theta) - y))
 
         # ===========================================================
         # Save the cost every iteration
