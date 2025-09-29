@@ -3,7 +3,7 @@ import numpy as np
 from featureNormalize import *
 from gradientDescent import *
 
-# from normalEqn import *
+from normalEqn import *
 
 plt.ion()
 
@@ -52,7 +52,7 @@ print("Running gradient descent ...")
 
 # Choose some alpha value
 alpha = 0.1
-num_iters = 50
+num_iters = 400
 
 # Init theta and Run Gradient Descent
 theta = np.zeros(3)
@@ -120,7 +120,8 @@ print("Theta computed from the normal equations : \n{}".format(theta))
 # Estimate the price of a 1650 sq-ft, 3 br house
 # ===================== Your Code Here =====================
 price = 0  # You should change this
-
+new_entry = np.array([1, 1650, 3])
+price = np.dot(new_entry, theta)
 
 # ==========================================================
 
