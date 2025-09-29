@@ -1,6 +1,6 @@
 # Relatório do T1
 
-Este trabalho foi desenvolvido por Vinícius Fontoura - GRR20206873.
+Este trabalho foi desenvolvido por Vinícius Fontoura - GRR20206873 e Diogo Almeida - GRR20210577.
 
 ## Introdução
 
